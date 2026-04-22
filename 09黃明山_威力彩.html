@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    // 作業
+    // 用上面練習完成的 function 製作威力彩號碼產生器
+    // 將隨機出的數字用 document.write() 顯示在網頁上
+    // 威力彩規則
+    // A 區 1~38 取 6 個數字
+    // B 區 1~8 取 1 個數字    
+
+    // 製作隨機數字 function，提供最小整數和最大整數，回傳一個區間內的隨機整數
+    function rand(min, max) {
+      return Math.round(Math.random() * (max - min)) + min
+    }
+
+    const aeraA = []
+    // document.write("A區：");
+    // for (let i = 0; i < 6; i++) {
+    //   let isFind = true
+    //   let randomA = 0
+    //   while (isFind === true) {
+    //     randomA = rand(1, 38)
+    //     isFind = aeraA.some(value => {
+    //       return value === randomA
+    //     })
+    //     console.log(randomA, aeraA, isFind)
+    //   }
+    //   document.write(randomA + ', ')
+    //   aeraA.push(randomA)
+    //   console.log(randomA, aeraA, isFind)
+    // }
+
+    while (aeraA.length < 6) {
+      const num = rand(1, 38)
+      if (!aeraA.includes(num)) {
+        aeraA.push(num)
+      }
+    }
+    document.write("A區：" + aeraA);
+
+    // const numbers = Array.from({ length: 38 }, (value, index) => {
+    //   return index + 1
+    // })
+    // console.log(numbers)
+
+
+
+    const randomB = rand(1, 8)
+    document.write("<br>B區：" + randomB);
+
+
+  </script>
+</body>
+
+</html>
