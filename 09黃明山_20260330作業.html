@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <!-- 
+  練習
+  製作一個星座判斷器，進入網頁時出現三個輸入視窗，分別是姓名、出生月份和出生日期
+  輸入完成後跳出訊息，格式為 OOO 你好，你的星座是 OOO 座
+   -->
+  <script>
+    const name = prompt('請輸入姓名')
+    const month = prompt('請輸入出生月份')
+    const day = prompt('請輸入出生日期')
+    if ((month === '1' && day >= 20) || (month === '2' && day <= 18)) {
+      document.write(`<p>${name} 你好，你的星座是 水瓶座</p>`)
+    } else if ((month === '2' && day >= 19) || (month === '3' && day <= 20)) {
+      document.write(`<p>${name} 你好，你的星座是 雙魚座</p>`)
+    } else if ((month === '3' && day >= 21) || (month === '4' && day <= 19)) {
+      document.write(`<p>${name} 你好，你的星座是 白羊座</p>`)
+    } else if ((month === '4' && day >= 20) || (month === '5' && day <= 20)) {
+      document.write(`<p>${name} 你好，你的星座是 金牛座</p>`)
+    } else if ((month === '5' && day >= 21) || (month === '6' && day <= 21)) {
+      document.write(`<p>${name} 你好，你的星座是 雙子座</p>`)
+    } else if ((month === '6' && day >= 22) || (month === '7' && day <= 22)) {
+      document.write(`<p>${name} 你好，你的星座是 巨蟹座</p>`)
+    } else if ((month === '7' && day >= 23) || (month === '8' && day <= 22)) {
+      document.write(`<p>${name} 你好，你的星座是 獅子座</p>`)
+    } else if ((month === '8' && day >= 23) || (month === '9' && day <= 22)) {
+      document.write(`<p>${name} 你好，你的星座是 處女座</p>`)
+    } else if ((month === '9' && day >= 23) || (month === '10' && day <= 23)) {
+      document.write(`<p>${name} 你好，你的星座是 天秤座</p>`)
+    } else if ((month === '10' && day >= 24) || (month === '11' && day <= 21)) {
+      document.write(`<p>${name} 你好，你的星座是 天蠍座</p>`)
+    } else if ((month === '11' && day >= 22) || (month === '12' && day <= 21)) {
+      document.write(`<p>${name} 你好，你的星座是 射手座</p>`)
+    } else if ((month === '12' && day >= 22) || (month === '1' && day <= 19)) {
+      document.write(`<p>${name} 你好，你的星座是 摩羯座</p>`)
+    } else {
+      document.write(`<p>${name} 你好，你的星座是 不明</p>`)
+    }
+  </script>
+</body>
+
+</html>
